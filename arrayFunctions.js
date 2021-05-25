@@ -8,8 +8,11 @@
  * isArrayLengthOdd([1, 2, 3]) -> true
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
+  var x= [2,7,6,5,4]
 function isArrayLengthOdd(numbers) {
-  // Your code here
+  if (x.length%2 !== 0) 
+          {return true}
+      else {return false }
 }
 
 /**
@@ -22,7 +25,12 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3]) -> false
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
+ var x= [2,7,6,5,4,3]
 function isArrayLengthEven(numbers) {
+  
+  if (x.length%2 === 0) 
+          {return true}
+      else {return false }
   // Your code here
 }
 
@@ -34,9 +42,15 @@ function isArrayLengthEven(numbers) {
  * e.g.
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
+   let instructors = ["Mshary", "Hasan"]
 function addLailaToArray(instructors) {
-  // Your code here
-}
+
+  instructors.push("Laila")
+  return  instructors
+ } 
+console.log (addLailaToArray(instructors) )
+
+
 
 /**
  * eliminateTeam(teams):
@@ -46,10 +60,15 @@ function addLailaToArray(instructors) {
  * e.g.
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
+ var Teams =["Brazil", "Germany", "Italy"]
 function eliminateTeam(teams) {
-  // Your code here
+  
+  Teams.shift()
+  const lastElement = Teams.pop()
+ return lastElement
 }
-
+console.log( eliminateTeam(Teams))
+  
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
  * - receives array `fruits`
@@ -60,7 +79,21 @@ function eliminateTeam(teams) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]) -> ["banana", "kiwi"]
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
+let fruits= []
+
 function secondHalfOfArrayIfItIsEven(fruits) {
+
+  if(fruits.length%2 > 0 ){
+ return fruits
+
+  }
+  else{
+   fruits = fruits.splice( (fruits.length/2)+1))
+
+return fruits 
+
+  } 
+
   // Your code here
 }
 
@@ -79,6 +112,13 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use string method .endsWith()
  */
 function youGottaCalmDown(shout) {
+  while (shout[shout.length - 2] === "!") {
+   
+    shout = shout.slice(0,-1);
+  }
+
+  return shout;
+}
   // Your code here
 }
 

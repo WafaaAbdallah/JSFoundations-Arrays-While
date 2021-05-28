@@ -8,12 +8,29 @@
  * isArrayLengthOdd([1, 2, 3]) -> true
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
-  var x= [2,7,6,5,4]
+  
 function isArrayLengthOdd(numbers) {
-  if (x.length%2 !== 0) 
-          {return true}
-      else {return false }
+  if(numbers.length%2 !==0){
+    return true;
+  }
+else{
+  return false;
 }
+
+
+
+
+
+}
+console.log(isArrayLengthOdd([1,2,3,4]));
+console.log(isArrayLengthOdd([1, 2, 3]));
+
+  // if (x.length%2 !== 0) 
+  //         return true
+  //     else {return false }
+
+// isArrayLengthOdd([1, 2, 3]);
+// isArrayLengthOdd([1, 2, 3, 4]);
 
 /**
  * isArrayLengthEven(numbers):
@@ -25,14 +42,26 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3]) -> false
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
- var x= [2,7,6,5,4,3]
+ 
 function isArrayLengthEven(numbers) {
-  
-  if (x.length%2 === 0) 
-          {return true}
-      else {return false }
-  // Your code here
+  if(numbers.length%2 === 0){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
+
+console.log(isArrayLengthEven([1, 2, 3]));
+console.log(isArrayLengthEven([1, 2, 3, 4]));
+
+//   if (x.length%2 === 0) 
+//           {return true}
+//       else {return false }
+//   // Your code here
+// }
+// isArrayLengthEven([1, 2, 3]);
+// isArrayLengthEven([1, 2, 3, 4]);
 
 /**
  * addLailaToArray(instructors):
@@ -48,7 +77,7 @@ function addLailaToArray(instructors) {
   instructors.push("Laila")
   return  instructors
  } 
-console.log (addLailaToArray(instructors) )
+console.log (addLailaToArray(instructors) );
 
 
 
@@ -62,11 +91,16 @@ console.log (addLailaToArray(instructors) )
  */
  var Teams =["Brazil", "Germany", "Italy"]
 function eliminateTeam(teams) {
-  
-  Teams.shift()
-  const lastElement = Teams.pop()
- return lastElement
+const lastOne =teams.pop();
+return lastOne;
+return teams.push(lastOne);
+
+
 }
+//   Teams.shift()
+//   const lastElement = Teams.pop()
+//  return lastElement
+// }
 console.log( eliminateTeam(Teams))
   
 /**
@@ -82,20 +116,30 @@ console.log( eliminateTeam(Teams))
 let fruits= []
 
 function secondHalfOfArrayIfItIsEven(fruits) {
+if (fruits.length %2 !== 0){
 
-  if(fruits.length%2 > 0 ){
- return fruits
+  return [];
+}
+else{
+  return fruits.splice(fruits.length/2);
+}
 
-  }
-  else{
-   fruits = fruits.splice( (fruits.length/2)+1))
+}
+//   if(fruits.length%2 > 0 ){
+//  return fruits
 
-return fruits 
+//   }
+//   else{
+//    fruits = fruits.splice(fruits.length/2)
 
-  } 
+// return fruits 
+
+//   } 
+ console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"])) ;
+
 
   // Your code here
-}
+
 
 /**
  * youGottaCalmDown(shout):
@@ -112,15 +156,18 @@ return fruits
  * - Use string method .endsWith()
  */
 function youGottaCalmDown(shout) {
-  while (shout[shout.length - 2] === "!") {
+
+   while (shout[shout.length - 2] === "!") {
    
     shout = shout.slice(0,-1);
   }
 
   return shout;
 }
+console.log(youGottaCalmDown("HI!!!!!!!!!!"));
+
   // Your code here
-}
+
 
 module.exports = {
   isArrayLengthOdd,
